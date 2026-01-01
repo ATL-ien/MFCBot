@@ -47,7 +47,7 @@ async function sendmessage(channelid, message) {
 client.once(Events.ClientReady, readyDiscord);
 
 // Login to Discord with your client's token
-client.login(process.env.TOKEN);
+client.login(process.env.DISCORD_TOKEN);
 
 async function readyDiscord() {
     console.log('💖');
