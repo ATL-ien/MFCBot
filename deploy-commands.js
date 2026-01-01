@@ -22,7 +22,7 @@ for (const file of commandFiles) {
 }
 
 // Construct and prepare an insance of the REST module
-const rest = new REST().setToken(process.env.TOKEN);
+const rest = new REST().setToken(process.env.DISCORD_TOKEN);
 
 // and deploy your commands!
 (async () => {
