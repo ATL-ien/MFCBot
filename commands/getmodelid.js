@@ -10,12 +10,11 @@ export const data = new SlashCommandBuilder()
         option.setName('modelname')
             .setDescription('Model\'s username')
             .setRequired(true))
-    .setDefaultMemberPermissions(PermissionFlagsBits.ManageChannels);
+    .setDefaultMemberPermissions(PermissionFlagsBits.ManageMessages);
 
 
 // Execute function export
 export async function execute(interaction) {
-    //console.log("interaction");
     const modelname = interaction.options.getString('modelname');
     const modelid = await webstuff.getmodelid(modelname);
     await interaction.reply({content: "Model ID is " + modelid, ephemeral: true});
